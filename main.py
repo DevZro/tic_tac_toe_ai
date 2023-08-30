@@ -1,6 +1,6 @@
 from Board import Board
 import random
-from bots import ab_negamax
+from bots import ab_negamax, minimax, negamax
 
 
 def comp_make_move(board, bot_func, move_list):
