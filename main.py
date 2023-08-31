@@ -19,7 +19,7 @@ my_board = Board()  # creates an instance of the board that we'll use
 decider = random.randint(0, 1)  # a random binary decider for who gets to start first, bot or human
 played_moves = []
 
-rint("Welcome to the tic-tac-toe game!")
+print("Welcome to the tic-tac-toe game!")
 print("\n")
 print("The squares are numbered as so...")
 print("1|2|3")
