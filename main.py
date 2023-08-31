@@ -19,6 +19,17 @@ my_board = Board()  # creates an instance of the board that we'll use
 decider = random.randint(0, 1)  # a random binary decider for who gets to start first, bot or human
 played_moves = []
 
+rint("Welcome to the tic-tac-toe game!")
+print("\n")
+print("The squares are numbered as so...")
+print("1|2|3")
+print("-+-+-")
+print("4|5|6")
+print("-+-+-")
+print("7|8|9")
+input("Click Enter to start!")
+print("\n")
+
 if decider:
     """
     if the decider is one, it gets treated as a true and activates this block,
@@ -26,7 +37,6 @@ if decider:
     that leads to the bot playing first but everything else remains the same
     """
     comp_make_move(my_board, ab_negamax, played_moves)
-    my_board.print_move_count()
 
 while True:
     """
@@ -49,8 +59,10 @@ while True:
                 print("You made an invalid move, try again.")
         except ValueError:
             print("You made an invalid move, try again.")
+    print("\n\n")
     my_board.print_move_count()
     my_board.print_board()
+    print("\n")
     if my_board.is_game_over_win()[0]:
         print("Congratulations you win!")  # the second output isn't needed, only the human can win after she plays
         exit()
